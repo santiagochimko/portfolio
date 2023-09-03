@@ -183,7 +183,7 @@ section {
   line-height: 1.5rem;
 }
 
-.about p {
+.about p, .display_mobile {
   color: var(--primary);
   padding: 1rem 0;
   font-size: 1.2rem;
@@ -244,6 +244,10 @@ section {
   width: 50%;
 }
 
+.display_mobile {
+  display: none;
+}
+
 .article_content img {
   width: 50%;
   border-radius: 1rem;
@@ -266,8 +270,8 @@ section {
   line-height: 33.6px;
 }
 
-.article_content button a {
-  text-decoration: none; 
+.article_content a {
+  text-decoration: none;
 }
 
 #contact {
@@ -435,7 +439,7 @@ footer {
   }
 
   header a {
-    padding-top: 7rem;
+    padding-top: 10rem;
   }
 
   .sectionAbout_container,
@@ -476,17 +480,25 @@ footer {
     width: 100%;
     margin-bottom: 2rem;
   }
+
   .article_content a {
     width: 12rem;
     text-decoration: none;
-}
-.article_content button {
-  width: 100%;
-}
+  }
 
+  .article_content button {
+    width: 100%;
+  }
+  .display_desktop{
+    display: none;
+  }
+ .display_mobile{
+  display: block;
+ }
   #contact article {
     width: 85%;
     height: 60vh;
+    background-image: none;
   }
 
   #contact h1 {
@@ -496,7 +508,9 @@ footer {
   #contact h3 {
     width: 50%;
   }
-
+form{
+  width: 100%;
+}
   .footer_container {
     width: 85%;
   }

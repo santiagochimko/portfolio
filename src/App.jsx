@@ -153,9 +153,14 @@ function App() {
                 <h3>JavaScript</h3>
                 <h3>API</h3>
                 <h3>Postman</h3>
+                <p className="display_desktop">
+                Interactive web application connected to a Pokemon API that allows you to view different Pokémon and all their characteristics. Additionally, it allows you to filter by name and display them in alphabetical or numerical order.
+                </p>
               </div>
               <img src={pokedexImg} alt="Pokedex preview img" />
-
+              <p className="display_mobile">
+              Interactive web application connected to a Pokemon API that allows you to view different Pokémon and all their characteristics. Additionally, it allows you to filter by name and display them in alphabetical or numerical order.
+              </p>
               <a href="https://senpaipokedexapp.netlify.app/" target="_blank">
                 <button>View project</button>
               </a>
@@ -171,9 +176,14 @@ function App() {
                 <h3>HTML5</h3>
                 <h3>CSS3</h3>
                 <h3>JavaScript</h3>
+                <p className="display_desktop">
+                The classic To-Do list. It allows you to add tasks, mark them as completed, and delete them. It displays the number of tasks remaining to be completed, allows you to filter by completed and in-progress tasks. Additionally, it features day and night mode.
+                </p>
               </div>
               <img src={todolistImg} alt="To do list preview img" />
-
+              <p className="display_mobile">
+              The classic To-Do list. It allows you to add tasks, mark them as completed, and delete them. It displays the number of tasks remaining to be completed, allows you to filter by completed and in-progress tasks. Additionally, it features day and night mode.
+              </p>
               <a
                 href="https://santiago-todolistapp.netlify.app/"
                 target="_blank"
@@ -196,9 +206,14 @@ function App() {
                 <h3>Postman</h3>
                 <h3>Next.js</h3>
                 <h3>Express.js</h3>
+                <p className="display_desktop">
+                An extensive project that simulates a combination of Tinder and Spotify. It allows you to generate playlists simply by liking and disliking artists, or alternatively, create playlists based on filters such as weather, mood, etc. A database and backend have been created to enable user registration, access to the database, and more. For further details, please visit the GitHub repository below.
+                </p>
               </div>
               <img src={audnImg} alt="Audn music app preview img" />
-
+              <p className="display_mobile">
+              An extensive project that simulates a combination of Tinder and Spotify. It allows you to generate playlists simply by liking and disliking artists, or alternatively, create playlists based on filters such as weather, mood, etc. A database and backend have been created to enable user registration, access to the database, and more. For further details, please visit the GitHub repository below.
+              </p>
               <a
                 href="https://github.com/santiagochimko/AppMusica_Gonzalo_Maximiliano_Santiago"
                 target="_blank"
