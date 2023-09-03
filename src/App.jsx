@@ -16,22 +16,31 @@ function App() {
   const [messageSent, setMessageSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false); // Track form submission state
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
-    message: '',
+    user_name: "",
+    user_email: "",
+    message: "",
   });
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true); // Set isSubmitting to true when form submission begins
 
-    emailjs.sendForm('service_rp8whi5', 'template_c4ow0km', form.current, 'NbKL289Zck4_qN24n')
-      .then((result) => {
-        console.log(result.text);
-        setMessageSent(true);
-      }, (error) => {
-        console.log(error.text);
-      })
+    emailjs
+      .sendForm(
+        "service_rp8whi5",
+        "template_c4ow0km",
+        form.current,
+        "NbKL289Zck4_qN24n"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setMessageSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
       .finally(() => {
         setIsSubmitting(false); // Reset isSubmitting after submission
       });
@@ -45,7 +54,10 @@ function App() {
     });
   };
 
-  const isFormValid = formData.user_name.trim() !== '' && formData.user_email.trim() !== '' && formData.message.trim() !== '';
+  const isFormValid =
+    formData.user_name.trim() !== "" &&
+    formData.user_email.trim() !== "" &&
+    formData.message.trim() !== "";
 
   return (
     <main>
@@ -143,11 +155,10 @@ function App() {
                 <h3>Postman</h3>
               </div>
               <img src={pokedexImg} alt="Pokedex preview img" />
-              <button>
-                <a href="https://senpaipokedexapp.netlify.app/" target="_blank">
-                  View project
-                </a>
-              </button>
+
+              <a href="https://senpaipokedexapp.netlify.app/" target="_blank">
+                <button>View project</button>
+              </a>
             </div>
             <p></p>
           </article>
@@ -162,14 +173,13 @@ function App() {
                 <h3>JavaScript</h3>
               </div>
               <img src={todolistImg} alt="To do list preview img" />
-              <button>
-                <a
-                  href="https://santiago-todolistapp.netlify.app/"
-                  target="_blank"
-                >
-                  View project
-                </a>
-              </button>
+
+              <a
+                href="https://santiago-todolistapp.netlify.app/"
+                target="_blank"
+              >
+                <button>View project</button>
+              </a>
             </div>
             <p></p>
           </article>
@@ -188,14 +198,13 @@ function App() {
                 <h3>Express.js</h3>
               </div>
               <img src={audnImg} alt="Audn music app preview img" />
-              <button>
-                <a
-                  href="https://github.com/santiagochimko/AppMusica_Gonzalo_Maximiliano_Santiago"
-                  target="_blank"
-                >
-                  View project
-                </a>
-              </button>
+
+              <a
+                href="https://github.com/santiagochimko/AppMusica_Gonzalo_Maximiliano_Santiago"
+                target="_blank"
+              >
+                <button>View project</button>
+              </a>
             </div>
             <p></p>
           </article>
@@ -208,59 +217,65 @@ function App() {
           </h1>
           <h3>santiagochimko.dev@gmail.com</h3>
           <form id="contact-form" ref={form} onSubmit={sendEmail}>
-      <div className="form-group input-material">
-        <label htmlFor="name-field">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="name-field"
-          name="user_name"
-          placeholder="Full Name"
-          required
-          value={formData.user_name}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div className="form-group input-material">
-        <label htmlFor="email-field">Email</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email-field"
-          name="user_email"
-          placeholder="Email"
-          required
-          value={formData.user_email}
-          onChange={handleInputChange}
-        />
-      </div>
-      <div className="form-group input-material">
-        <label htmlFor="textarea-field">Your Message</label>
-        <textarea
-          className="form-control"
-          id="textarea-field"
-          rows="3"
-          name="message"
-          required
-          value={formData.message}
-          onChange={handleInputChange}
-        ></textarea>
-      </div>
-      {messageSent && (
-        <p>Message sent. Thanks for reaching out to me, I'll be in touch!</p>
-      )}
-      <div className="text-center">
-        <button
-          type="submit"
-          style={{
-            backgroundColor: isSubmitting ? 'var(--secondary)' : isFormValid ? 'var(--secondary)' : 'var(--gray)',
-          }}
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? 'Submitting...' : 'Get in touch'}
-        </button>
-      </div>
-    </form>
+            <div className="form-group input-material">
+              <label htmlFor="name-field">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name-field"
+                name="user_name"
+                placeholder="Full Name"
+                required
+                value={formData.user_name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group input-material">
+              <label htmlFor="email-field">Email</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email-field"
+                name="user_email"
+                placeholder="Email"
+                required
+                value={formData.user_email}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group input-material">
+              <label htmlFor="textarea-field">Your Message</label>
+              <textarea
+                className="form-control"
+                id="textarea-field"
+                rows="3"
+                name="message"
+                required
+                value={formData.message}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            {messageSent && (
+              <p>
+                Message sent. Thanks for reaching out to me, I'll be in touch!
+              </p>
+            )}
+            <div className="text-center">
+              <button
+                type="submit"
+                style={{
+                  backgroundColor: isSubmitting
+                    ? "var(--secondary)"
+                    : isFormValid
+                    ? "var(--secondary)"
+                    : "var(--gray)",
+                }}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Get in touch"}
+              </button>
+            </div>
+          </form>
         </article>
       </section>
       <footer>

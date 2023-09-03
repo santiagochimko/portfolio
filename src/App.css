@@ -27,7 +27,7 @@ nav {
 
 nav h1 {
   color: var(--white);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 28px;
 }
@@ -36,6 +36,7 @@ nav ul {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  padding-left: 0;
 }
 
 nav ul li {
@@ -47,7 +48,7 @@ nav ul li {
 nav ul li a {
   color: var(--white);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.75rem;
 }
@@ -85,6 +86,7 @@ header {
   flex-direction: row;
   gap: 1rem;
   margin-bottom: 1rem;
+  padding-left: 0;
 }
 
 .header_container ul li {
@@ -232,7 +234,7 @@ section {
 .article_content h1 {
   width: 100%;
   color: var(--primary);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 4.4rem;
   margin-bottom: 0.9rem;
@@ -249,7 +251,7 @@ section {
 
 .article_content button {
   display: flex;
-  width: 12.9rem;
+  width: 11.9rem;
   padding: 1.2rem 2.4rem 1.2rem 2.4rem;
   /* margin-top: 2.4rem; */
   justify-content: center;
@@ -258,14 +260,14 @@ section {
   background-color: var(--secondary);
   box-shadow: 9px 9px 0px 0px var(--primary);
   cursor: pointer;
-}
-
-.article_content button a {
-  text-decoration: none;
   color: var(--white);
   font-size: 19.2px;
   font-weight: 700;
   line-height: 33.6px;
+}
+
+.article_content button a {
+  text-decoration: none; 
 }
 
 #contact {
@@ -308,8 +310,8 @@ form p {
 }
 
 .form-control {
-  margin-top: 0.7rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 textarea.form-control {
@@ -321,7 +323,6 @@ textarea.form-control {
   width: 12.9rem;
   padding: 1.2rem 2.4rem 1.2rem 2.4rem;
   margin-top: 2.8rem;
-  /* margin-top: 2.4rem; */
   justify-content: center;
   align-items: center;
   border: none;
@@ -375,10 +376,12 @@ footer {
   line-height: 1.75rem;
   margin-bottom: 0.5rem;
 }
+
 .links_container ul,
-.getInTouch_container ul{
- padding: 0;
+.getInTouch_container ul {
+  padding: 0;
 }
+
 .links_container ul li {
   list-style: none;
 }
@@ -399,4 +402,106 @@ footer {
 
 .getInTouch_container ul li {
   list-style: none;
+}
+
+@media (max-width: 425px) {
+  body {
+    width: 425px;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    position: unset;
+  }
+
+  header {
+    justify-content: flex-start;
+    padding-top: 10%;
+  }
+
+  .header_container h1 {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+
+  .header_container p {
+    width: 100%;
+  }
+
+  header a {
+    padding-top: 7rem;
+  }
+
+  .sectionAbout_container,
+  .sectionProjects_container {
+    width: 85%;
+  }
+
+  .sectionAbout_container article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .about {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .article_content {
+    flex-direction: column;
+  }
+
+  .article_content h1 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .article_content .about {
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .article_content img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .article_content a {
+    width: 12rem;
+    text-decoration: none;
+}
+.article_content button {
+  width: 100%;
+}
+
+  #contact article {
+    width: 85%;
+    height: 60vh;
+  }
+
+  #contact h1 {
+    font-size: 3rem;
+  }
+
+  #contact h3 {
+    width: 50%;
+  }
+
+  .footer_container {
+    width: 85%;
+  }
+
+  .name_container {
+    width: 30%;
+  }
 }
