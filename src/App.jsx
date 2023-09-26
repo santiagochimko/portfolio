@@ -7,6 +7,8 @@ import profilePicture from "./assets/santiagoProfilePicture.png";
 import pokedexImg from "./assets/pokedex.png";
 import todolistImg from "./assets/todolistapp.png";
 import audnImg from "./assets/audnmusicapp.png";
+import creditcard from "./assets/creditcard.png";
+import registerform from "./assets/registerform.png";
 import emailjs from "@emailjs/browser";
 
 emailjs.init("NbKL289Zck4_qN24n");
@@ -216,6 +218,58 @@ function App() {
               </p>
               <a
                 href="https://github.com/santiagochimko/AppMusica_Gonzalo_Maximiliano_Santiago"
+                target="_blank"
+              >
+                <button>View project</button>
+              </a>
+            </div>
+            <p></p>
+          </article>
+          <article className="content_right">
+            <h2>PERSONAL PROJECT</h2>
+            <div className="article_content">
+              <h1>Credit/Debit Card Component</h1>
+              <div className="about">
+                <h3>React.js</h3>
+                <h3>HTML5</h3>
+                <h3>CSS3</h3>
+                <h3>JavaScript</h3>                
+                <h3>Bootstrap 5</h3>                
+                <p className="display_desktop">
+                This project uses the "react-credit-cards 2" dependency to create a credit/debit card form. It allows the card to automatically update to the corresponding provider based on the entered card number. Additionally, some input validations have been added to enhance the user experience.
+                </p>
+              </div>
+              <img src={creditcard} alt="Credit/Debit card component preview img" />
+              <p className="display_mobile">
+              This project uses the "react-credit-cards 2" dependency to create a credit/debit card form. It allows the card to automatically update to the corresponding provider based on the entered card number. Additionally, some input validations have been added to enhance the user experience.
+              </p>
+              <a
+                href="https://regal-tarsier-102acc.netlify.app/"
+                target="_blank"
+              >
+                <button>View project</button>
+              </a>
+            </div>
+            <p></p>
+          </article>
+          <article className="content_right">
+            <h2>PERSONAL PROJECT</h2>
+            <div className="article_content">
+              <h1>Register Form Validation Component</h1>
+              <div className="about">
+                <h3>React.js</h3>
+                <h3>HTML5</h3>
+                <h3>CSS3</h3>                               
+                <p className="display_desktop">
+                This is a simple project in which a registration form is created using useState, and validations are added to it using the HTML pattern property.
+                </p>
+              </div>
+              <img src={registerform} alt="Form component preview img" />
+              <p className="display_mobile">
+              This is a simple project in which a registration form is created using useState, and validations are added to it using the HTML pattern property.
+              </p>
+              <a
+                href="https://gleeful-crepe-730aeb.netlify.app/"
                 target="_blank"
               >
                 <button>View project</button>
